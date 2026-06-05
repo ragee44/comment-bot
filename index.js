@@ -166,6 +166,9 @@ app.get("/webhook", (req, res) => {
 
 // 2) Приём событий (Facebook шлёт POST)
 app.post("/webhook", async (req, res) => {
+  // --- ДИАГНОСТИКА: печатаем ЛЮБОЙ входящий запрос до всех фильтров ---
+  console.log("📩 ВХОДЯЩИЙ POST:", JSON.stringify(req.body));
+
   if (!verifySignature(req)) {
     console.error("❌ Неверная подпись запроса");
     return res.sendStatus(403);
