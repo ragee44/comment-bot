@@ -1,0 +1,13 @@
+{
+  "name": "comment-bot",
+  "version": "1.0.0",
+  "description": "Comment-to-DM bot via Facebook Private Replies",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
